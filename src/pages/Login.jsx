@@ -1,23 +1,12 @@
 const LoginPage = () => {
   return (
-    <div className="logn-wrapper bg-primary h-auto">
-      <div className="header bg-white py-4 ">
-        <div className="logo w-3/4 mx-auto">
-          <h1>ogplateau</h1>
-        </div>
-      </div>
-
-      <div className="login-content py-40 grid grid-cols-1 md:grid-cols-2 w-3/4 mx-auto ">
-        <div className="img">
-          <h1 className="text-4xl text-white">ogplateau</h1>
-        </div>
-        <div className="form">
+    <div className="form">
           <form action="" className="w-full max-w-sm">
-            <div class="md:items-start mb-6">
+            <div class="md:items-start mb-8">
               <div class="">
                 <label
-                  class="block text-white  font-light  mb-1 md:mb-0 pr-4"
-                  for="inline-full-name"
+                  class="block text-white text-sm  font-light  mb-1 md:mb-0 pr-4 uppercase"
+                  for="inline-full-name "
                 >
                   Email
                 </label>
@@ -31,11 +20,11 @@ const LoginPage = () => {
               </div>
             </div>
 
-            <div class="md:items-start mb-6">
+            <div class="md:items-start mb-8">
               <div class="">
                 <label
-                  class="block text-white  font-light  mb-1 md:mb-0 pr-4"
-                  for="inline-full-name"
+                  class="block text-white  text-sm font-light uppercase  mb-1 md:mb-0 pr-4"
+                  for="inline-full-name "
                 >
                   Password
                 </label>
@@ -49,7 +38,7 @@ const LoginPage = () => {
               </div>
             </div>
 
-            <div className="remember-section flex justify-between">
+            <div className="remember-section pt- flex justify-between">
               <div className="remember-me flex justify-between">
                 <div className="bg-secondary h-4 w-4 rounded-sm mt-1">
                   <input
@@ -60,39 +49,41 @@ const LoginPage = () => {
                     id=""
                   />
                 </div>
-                <p className="text-white pl-4 ">Remember me</p>
+                <p className="text-white pl-4 text-sm ">Remember me</p>
               </div>
               <div className="forg-pswd">
-                <p>
-                  <a href="" className="text-secondary font-light">
+                <p className="hover:underline hover:underline-offset-6">
+                  <a href="" className="text-secondary text-sm font-light">
                     Forgot Password
                   </a>
                 </p>
               </div>
             </div>
-            <div className="submit-btn pt-6">
+            <div className="submit-btn mt-14">
               <button class="bg-secondary hover:bg-blue-700 text-white font-bold py-2 px-4 uppercase rounded-full w-full">
                 Sign in
               </button>
             </div>
           </form>
-          <div className="divide-section flex mt-10"></div>
-          <div className="social-icons flex w-1/4 mx-28 justify-between">
+          <div className="divide-section flex mt-12"></div>
+          <div className="social-icons flex w-2/4 text-center mx-auto justify-between">
             <div className="facebook border rounded-full border-secondary w-10 h-10">
-              <a href=" " className="text-secondary text-center mx-auto">
+              <a href=" " className="text-secondary  text-center mx-auto">
               
-                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-facebook-f text-center mx-auto py-2 px-3"></i>
               </a>
             </div>
             <div className="google border rounded-full border-secondary w-10 h-10">
               <a href="">
-                <i class="fa-brands fa-google text-secondary"></i>
+                <i class="fa-brands fa-google text-secondary text-sm w- text-center mx-auto py-2 px-3"></i>
               </a>
             </div>
           </div>
+          <div className="footer mt-8">
+            <h1 className="text-white text-center tracking-wide ">Don’t have an account? <a className="text-secondary">Register</a></h1>
+          </div>
         </div>
-      </div>
-    </div>
+      
   );
 };
 
