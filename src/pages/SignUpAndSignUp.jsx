@@ -3,6 +3,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import LoginPage from "./Login";
 import RegisterPage from "./Register";
 
+// assets
+import side_1 from "../assets/Group 207.png";
+import side_2 from "../assets/Group 100.png";
+
 import 'react-tabs/style/react-tabs.css';
 
 
@@ -19,10 +23,11 @@ const SignUpAndSignUp = () => {
       </div>
 
       <div className="auth-content py-20 grid grid-cols-1 md:grid-cols-2 w-full mx-10 md:text-sm md:w-3/4 md:mx-auto ">
-        <div className="img w-1/3">
-          <h1 className="text-4xl text-white invisible md:mb-0 md:visible ">
-            ogplateau
-          </h1>
+        <div className="img w-1/">
+          <div className="text-4xl text-white invisible md:mb-0 md:visible flex flex-row mx-[-46px] ">
+            <img src={side_1} alt="" className="mr-28 mb-8"/> 
+            <img src={side_2} alt="" className=" ml-18 mb-3"/>
+          </div>
         </div>
         <div className="form w-3/4">
           <Tabs
