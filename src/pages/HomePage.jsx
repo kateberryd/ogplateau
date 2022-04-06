@@ -5,7 +5,7 @@ import banner_pic from "../assets/Group 222.png";
 import img_2 from "../assets/[GetPaidStock 3.png";
 import img_3 from "../assets/jake-blucker-OJX7gIU3E6U-unsplash (1) 2.png";
 import img_logo from "../assets/logo.png";
-import opg from "../assets/open-government-partnership-logo-square-600x600-300x300 5.png";
+import glogo from "../assets/open-global.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -46,7 +46,7 @@ const HomePage = () => {
           <div className="card grid grid-cols-1 md:grid-cols-2">
             <div className="card shadow-2xl bg-white flex py-4 px-4 ">
               <div className="rounded-full w-14 h-8 bg-primary">
-                <img src={opg} alt="" className="rounded-full object-fit w-14 h-8" />
+                <img src={glogo} alt="" className="rounded-full object-fit w-14 h-8" />
               </div>
               <div className="content px-10">
                 <h1 className="text-primary capitalize text-lg font-extrabold">
