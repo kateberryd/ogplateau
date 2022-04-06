@@ -1,5 +1,12 @@
 import Navbar from "../components/Navbar";
 
+// assets 
+import banner_pic from "../assets/Group 222.png";
+import img_2 from "../assets/[GetPaidStock 3.png";
+import img_3 from "../assets/jake-blucker-OJX7gIU3E6U-unsplash (1) 2.png";
+import img_logo from "../assets/logo.png";
+import opg from "../assets/open-government-partnership-logo-square-600x600-300x300 5.png";
+
 const HomePage = () => {
   return (
     <div className="wrapper">
@@ -37,7 +44,9 @@ const HomePage = () => {
         <div className="post mx-48 absolute top-80 pt-64">
           <div className="card grid grid-cols-1 md:grid-cols-2">
             <div className="card shadow-2xl bg-white flex py-4 px-4 ">
-              <div className="rounded-full w-14 h-10 bg-primary"></div>
+              <div className="rounded-full w-14 h-8 bg-primary">
+                <img src={opg} alt="" className="rounded-full object-fit w-14 h-8" />
+              </div>
               <div className="content px-10">
                 <h1 className="text-primary capitalize text-lg font-extrabold">
                   Open government partnership
@@ -57,7 +66,9 @@ const HomePage = () => {
               </div>
             </div>
             <div className="card shadow-2xl bg-primary flex py-4 px-4 ">
-              <div className="rounded-full w-14 h-10 bg-white"></div>
+              <div className="rounded-full w-14 h-8 bg-white">
+              <img src={img_logo} alt="" className="rounded-full object-fit w-14 h-8" />
+              </div>
               <div className="content px-10">
                 <h1 className="text-white capitalize text-lg font-extrabold">
                   Open government partnership
@@ -105,7 +116,9 @@ const HomePage = () => {
                 </a>
               </div>
             </div>
-            <div className="img bg-primary h-auto"></div>
+            <div className="img bg-primary h-auto">
+              <img src={banner_pic} alt=""  width="100%" height=""/>
+            </div>
           </div>
         </div>
 
@@ -280,7 +293,9 @@ const HomePage = () => {
                   </p>
                 </div>
               </div>
-              <div className="img bg-white h-auto"></div>
+              <div className="img bg-white h-auto">
+                <img src={img_2} alt="" width="100%" height="100" />
+              </div>
             </div>
           </div>
         </section>
@@ -295,7 +310,9 @@ const HomePage = () => {
             <div className="cards mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="card relative shadow-2xl bg-white ">
                 <div className="content">
-                  <div className="card-img  bg-primary h-40"></div>
+                  <div className="card-img  bg-primary h-40">
+                    <img src={img_3} alt="" className="object-cover h-40 w-96"/>
+                  </div>
 
                   <div className="location absolute top-28 mt-6 shadow-lg  text-sm  bg-secondary w-20 py-2 ">
                     <p className="text-white text-center">Jos South</p>
@@ -310,7 +327,9 @@ const HomePage = () => {
 
               <div className="card relative shadow-2xl bg-white  ">
                 <div className="content">
-                  <div className="card-img bg-primary h-40"></div>
+                  <div className="card-img bg-primary h-40">
+                    <img src={img_3} alt="" className="object-cover h-40 w-96"/>
+                  </div>
 
                   <div className="location absolute top-28 mt-6 shadow-lg text-sm  bg-secondary w-20 py-2 ">
                     <p className="text-white text-center">Jos North</p>
@@ -324,7 +343,9 @@ const HomePage = () => {
 
               <div className="card relative shadow-2xl bg-white    ">
                 <div className="content">
-                  <div className="card-img bg-primary h-40"></div>
+                  <div className="card-img bg-primary h-40">
+                    <img src={img_3} alt="" className="object-cover h-40 w-96"/>
+                  </div>
 
                   <div className="location absolute top-28 mt-6 shadow-lg  text-sm  bg-secondary w-20 py-2 ">
                     <p className="text-white text-center">Bassa</p>

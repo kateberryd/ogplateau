@@ -12,7 +12,7 @@ export default () => (
         />
 
         <h1 className="font-extrabold  uppercase text-secondary text-2xl">
-          open<span className="text-primary">Eye</span>
+          pen<span className="text-primary">Eye</span>
         </h1>
       </div>
 
