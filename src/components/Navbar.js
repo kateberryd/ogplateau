@@ -1,5 +1,6 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { Link } from "react-router-dom";
 
 export default () => (
   <nav className=" ">
@@ -40,12 +41,12 @@ export default () => (
             About
           </a>
 
-          <a
-            href="#"
-            class="bg-primary text-white  text-sm font-semibold  hover:text-secondary px-4 py-3 rounded-one "
+          <Link
+            to="/auth"
+            class="bg-secondary text-white capitalize  text-sm font-extrabold  hover:text-primary  px-4 py-3 rounded-one "
           >
             Login / Register
-          </a>
+          </Link>
         </div>
       </div>
     </div>

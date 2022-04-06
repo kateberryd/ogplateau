@@ -1,11 +1,12 @@
 import Navbar from "../components/Navbar";
 
-// assets 
+
 import banner_pic from "../assets/Group 222.png";
 import img_2 from "../assets/[GetPaidStock 3.png";
 import img_3 from "../assets/jake-blucker-OJX7gIU3E6U-unsplash (1) 2.png";
 import img_logo from "../assets/logo.png";
 import opg from "../assets/open-government-partnership-logo-square-600x600-300x300 5.png";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -24,12 +25,12 @@ const HomePage = () => {
               cupiditate eius.
             </p>
             <div className="heder-btns pt-10">
-              <a
-                href="/auth"
+              <Link
+                to="/auth"
                 class="bg-secondary text-white capitalize  text-sm font-extrabold  hover:text-primary  px-4 py-3 rounded-one "
               >
                 Login / Register
-              </a>
+              </Link>
 
               <a
                 href="#"
@@ -109,7 +110,7 @@ const HomePage = () => {
 
               <div className="mt-8">
                 <a
-                  href="/auth"
+                  href="/auth/"
                   class="bg-secondary2 shadow-md text-primary capitalize   text-sm font-semibold  hover:text-primary  px-4 py-3 rounded-one "
                 >
                   Login / Register
@@ -366,12 +367,12 @@ const HomePage = () => {
               <div className="card">
                 <h1 className="text-primary text-2xl">Our Action Plans</h1>
                 <p className="pt-8 text-sm">
-                Plateau joined OGP as part of the 2020 cohort. They are currently implementing five commitments from their 2021-2023 action plan.
-
+                  Plateau joined OGP as part of the 2020 cohort. They are
+                  currently implementing five commitments from their 2021-2023
+                  action plan.
                 </p>
-           
               </div>
-              
+
               <div className="card">
                 <h1 className="text-primary text-2xl">Our Action Plans</h1>
                 <div className="link pt-4">
@@ -446,7 +447,10 @@ const HomePage = () => {
               </div>
             </div>
             <hr className="mt-10 border-2 bg-inputcolor" />
-            <p className="text-center text-sm">Copyright © 2021 Designed and Developed by nHub Nigeria. All Rights Reserved</p>
+            <p className="text-center text-sm">
+              Copyright © 2021 Designed and Developed by nHub Nigeria. All
+              Rights Reserved
+            </p>
           </div>
         </footer>
       </div>

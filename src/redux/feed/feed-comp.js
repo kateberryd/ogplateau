@@ -11,15 +11,16 @@ const config = {
 };
 
 export const createFeed = createAsyncThunk(
-  "users/feed",
+  "users/createfeed",
   async ({ feed_title, feed_description, tag, feed_media }, thunkAPI) => {
     try {
-      console.log(token);
+      console.log("sjjksjks");
       const response = await fetch(baseurl + "/feed", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "content-type": "application/json",
+
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
@@ -30,9 +31,9 @@ export const createFeed = createAsyncThunk(
         }),
       });
       let data = await response.json();
-      console.log("response", data);
+      console.log("response", data.newFeed);
       if (data.success) {
-        return data;
+        return data.newFeed;
       } else {
         return thunkAPI.rejectWithValue(data);
       }
@@ -47,7 +48,7 @@ export const createFeed = createAsyncThunk(
 
 
 export const getFeeds = createAsyncThunk(
-  "users/feed",
+  "users/getfeeds",
   async ( thunkAPI) => {
     try {
       const response = await fetch(baseurl + "/feed", {
