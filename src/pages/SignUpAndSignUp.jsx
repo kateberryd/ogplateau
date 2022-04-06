@@ -7,6 +7,10 @@ import RegisterPage from "./Register";
 import side_1 from "../assets/Group 207.png";
 import side_2 from "../assets/Group 100.png";
 
+import glogo from "../assets/open-global.png";
+
+import logo from "../assets/logo.png";
+
 import 'react-tabs/style/react-tabs.css';
 
 
@@ -15,11 +19,19 @@ const SignUpAndSignUp = () => {
   console.log(tabIndex);
 
   return (
-    <div className="logn-wrapper bg-primary h-auto">
+    <div className="logn-wrapper bg-primary h-auto ">
       <div className="header bg-white py-4 ">
-        <div className="logo w-3/4 mx-auto">
-          <h1>ogplateau</h1>
-        </div>
+      <div className="logo items-center flex mx-48">
+              <img class="block h-8 w-auto mr-2" src={glogo} alt="Workflow" />
+              <img class="block w-8 h-8 " src={logo} alt="Workflow" />
+
+              <h1 className="font-bold text-secondary text-xl">
+                pen
+                <span className="text-primary text-center mt-auto">
+                  Government Partnership
+                </span>
+              </h1>
+            </div>
       </div>
 
       <div className="auth-content py-20 grid grid-cols-1 md:grid-cols-2 w-full mx-10 md:text-sm md:w-3/4 md:mx-auto ">

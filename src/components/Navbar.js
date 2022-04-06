@@ -1,22 +1,25 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Link } from "react-router-dom";
+import glogo from "../assets/open-global.png";
+
+import logo from "../assets/logo.png";
+
 
 export default () => (
   <nav className=" ">
     <div className="first-nav flex justify-between w-3/4 mx-auto py-4 bg-white">
-      <div className="logo">
-        <img
-          class="block lg:hidden h-8 w-auto"
-          src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-          alt="Workflow"
-        />
+    <div className="logo items-center flex ">
+              <img class="block h-8 w-auto mr-2" src={glogo} alt="Workflow" />
+              <img class="block w-8 h-8 " src={logo} alt="Workflow" />
 
-        <h1 className="font-extrabold  uppercase text-secondary text-2xl">
-          pen<span className="text-primary">Eye</span>
-        </h1>
-      </div>
-
+              <h1 className="font-bold text-secondary text-xl">
+                pen
+                <span className="text-primary text-center mt-auto">
+                  Government Partnership
+                </span>
+              </h1>
+            </div>
       <div class="hidden sm:block sm:ml-6 pt-1 pl-3">
         <div class="flex space-x-4">
           <a
