@@ -22,9 +22,9 @@ export const loginUser = createAsyncThunk(
         }
       )
       let data = await response.json()
-      console.log("response", data)
       if (response.status === 200) {
-        localStorage.setItem("token", data.token)
+        sessionStorage.setItem('token', data.data.token)
+        localStorage.setItem("token", data.data.token)
         return data
       } else {
         return thunkAPI.rejectWithValue(data)
