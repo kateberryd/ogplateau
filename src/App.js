@@ -3,7 +3,8 @@ import {  BrowserRouter as Router, Routes, Route,  } from "react-router-dom";
 import SignUpAndSignUp from './pages/SignUpAndSignUp'
 import UserDashboard from './pages/Dashboard'
 import HomePage from './pages/HomePage'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css';
 
@@ -19,6 +20,9 @@ function App() {
           <Route path="/dashboard" element={<UserDashboard />} />
       </Routes>
       </Router>
+      
+      <ToastContainer />
+
     </>
   );
 }
