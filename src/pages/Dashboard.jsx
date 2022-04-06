@@ -41,6 +41,10 @@ const UserDashboard = () => {
 
   const dispatch = useDispatch();
   const { register, errors, handleSubmit } = useForm();
+  
+  const formatter = (date) =>{
+  return new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(date)
+  }
 
   const onSubmit = async (request) => {
     const data = new FormData();
@@ -66,8 +70,14 @@ const UserDashboard = () => {
     
     await dispatch(createFeed(spoons)); 
     
-    await dispatch(clearState());
-   
+    if (isSuccessCreate) {
+      console.log("sjjshshshjshjs")
+      toast.success("Feed was created successfully!");
+      setShowModal(false);
+      dispatch(getFeeds());
+      dispatch(clearState());
+
+    }
 
   };
 
@@ -168,24 +178,25 @@ const UserDashboard = () => {
               </svg>
             </div>
           ) : (
-            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {feeds == null ? (
-                <h1 className="text-xl uppercase text-center text-gray-700 ">
-                  No feeds or internet, please refresh
-                </h1>
-              ) : (
+            
+            <div>
+          
+          {
+            
+          false ? (<h1 className="text-center pt-20 text-gray-500">No feeds or internet, please refresh your network</h1>) :
+            <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10">
+              {
+               
                 feeds.map((feed) => (
                   <div className=" ">
                     {
-                      <div
-                        className=" h-48 text-center rounded-sm "
-                        style={{ backgroundImage: `url(${feed.feed_media})` }}
-                        title="Mountain"
-                      ></div>
+                      <div className="img">
+                        <img className="rounded-t-lg" src={feed.feed_media} alt="" />
+                      </div>
                     }
-                    <div className=" bg-white py-4 shadow-xl rounded-sm   p-4 flex flex-col justify-between leading-normal">
+                    <div className=" bg-white py-4 mb-10 shadow-2xl shadow- rounded-lg   p-4 flex flex-col justify-between leading-normal">
                       <div className="mb-4">
-                        <p className="text-sm text-gray-600 flex items-center">
+                        <p className="text-xs text-gray-600 flex items-center">
                           <svg
                             className="fill-current text-gray-500 w-3 h-3 mr-2"
                             xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +206,7 @@ const UserDashboard = () => {
                           </svg>
                           {feed.tag}
                         </p>
-                        <div className="text-primary font-bold text-xl mb-2">
+                        <div className="text-primary capitalize font-bold text-lg mb-2">
                           {feed.feed_title}
                         </div>
                         <p className="text-gray-700 text-sm w-2/4">
@@ -208,8 +219,7 @@ const UserDashboard = () => {
                           src={logo}
                         />
                         <div className="text-sm">
-                          <p className="text-gray-900 leading-none">
-                            ogplateau
+                          <p className="text-gray-900 pb-2 leading-none">
                           </p>
                           <p className="text-gray-600  ">{feed.createdAt}</p>
                         </div>
@@ -217,8 +227,9 @@ const UserDashboard = () => {
                     </div>
                   </div>
                 ))
-              )}
+              }
             </div>
+}</div> 
           )}
         </div>
       </header>
@@ -230,7 +241,7 @@ const UserDashboard = () => {
           <>
             <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
               <div className="relative p-3 w-full max-w-2xl h-full md:h-auto">
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div className="border-0 rounded-lg drop-shadow-2xl relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   <div className="flex items-start justify-between p-3 border-b border-solid border-gray-300 rounded-t ">
                     <h6 className="text-xl font=semibold">Create new feed</h6>
                     <button

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 import { createFeed, getFeeds } from "./feed-comp";
 
 const initialState = {
-    feeds: null,
+    feeds: [],
     isLoading: false,
     isSuccess: false,
     isSuccessCreate: false,
