@@ -39,7 +39,7 @@ export const loginUser = createAsyncThunk(
 
 export const registerUser = createAsyncThunk(
   "users/register",
-  async ({ email, password }, thunkAPI) => {
+  async ({ first_name, last_name, email, phone , gender, password2 }, thunkAPI) => {
     try {
       const response = await fetch(
         baseurl+ "/user/register",
@@ -50,8 +50,12 @@ export const registerUser = createAsyncThunk(
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            first_name,
+            last_name,
             email,
-            password,
+            phone,
+            gender, 
+            password2
           }),
         }
       )

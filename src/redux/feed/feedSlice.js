@@ -5,6 +5,7 @@ const initialState = {
     feeds: null,
     isLoading: false,
     isSuccess: false,
+    isSuccessCreate: false,
     isError: false,
     errorMessage: "",
 
@@ -23,11 +24,11 @@ const initialState = {
       [createFeed.pending]: (state, { payload }) => {
         state.isLoading = true;
       },
-      [createFeed.fulfilled]: (state, {  }) => {
+      [createFeed.fulfilled]: (state, { payload }) => {
+        console.log("hey law")
         state.isError = false
         state.isLoading = false;
-        state.isSuccess = true;
-        return state;
+        state.isSuccessCreate = true;
       },
       [createFeed.rejected]: (state, { payload }) => {
         console.log('payload', payload);

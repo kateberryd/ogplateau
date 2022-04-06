@@ -19,20 +19,28 @@ function App() {
   const { isAuth } = useSelector((state) => state.user);
   const token = localStorage.token;
 var decoded = jwt_decode(token);
-console.log(decoded)
 
   return (
     <>
       <Router>
         <Routes>
+        
+        
           <Route path="/" element={<HomePage />} />
+          
+          
 
-          <Route path="/auth" element={<SignUpAndSignUp />} />
+          <Route path="/auth" element={
+            
+            <SignUpAndSignUp />
+            
+            
+            } />
 
           <Route
             path="/dashboard"
             element={
-              <PrivateRoute isAuthenticated={true}>
+              <PrivateRoute isAuthenticated={decoded.isLoggedIn}>
                 <UserDashboard />
               </PrivateRoute>
             }
